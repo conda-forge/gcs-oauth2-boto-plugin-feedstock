@@ -1,5 +1,5 @@
 {% set name = "gcs-oauth2-boto-plugin" %}
-{% set version = "2.5" %}
+{% set version = "2.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fd5080d2047bf8253a7f01727a4f36ae59feb82d99bce0284594842173ab4d56
+  sha256: 79f539a8d3aa9445515dc275b123e6607c2f64531cb58bc19f2a2451c7944144
 
 build:
   number: 0
