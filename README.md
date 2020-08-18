@@ -5,7 +5,7 @@ Home: https://pypi.org/project/gcs-oauth2-boto-plugin/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Auth plugin allowing use the use of OAuth 2.0 credentials for Google Cloud Storage in the Boto library.
 
