@@ -1,5 +1,5 @@
 {% set name = "gcs-oauth2-boto-plugin" %}
-{% set version = "3.0" %}
+{% set version = "3.2" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gcs-oauth2-boto-plugin-{{ version }}.tar.gz
-  sha256: f4120b08b7f8d32904674c98f07d4caf4083a58343c0c0fa0016e0f0254dfe31
+  sha256: a46817f3abed2bc4f6b4b12b0de7c8bf5ff5f1822dc03c45fa1ae6ed7a455843
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,6 +20,8 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - google-auth ==2.17.0
+    - google-auth-httplib2 >=0.2.0
     - boto >=2.29.1
     - google-reauth >=0.1.0
     - httplib2 >=0.18
