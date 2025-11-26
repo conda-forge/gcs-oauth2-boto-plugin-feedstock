@@ -11,14 +11,15 @@ source:
   sha256: 748e8f73161c884bc1251748b4920115201829ed9a258e7112e8bf8ce45eae18
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - google-auth ==2.39.0
     - google-auth-httplib2 >=0.2.0
@@ -27,7 +28,7 @@ requirements:
     - httplib2 >=0.18
     - oauth2client >=2.2.0
     - pyopenssl >=0.13
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }}
     - retry_decorator >=1.0.0
     - rsa ==4.7.2
     - six >=1.12.0
